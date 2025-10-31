@@ -39,9 +39,10 @@ try {
   
   // Limpar TODOS os arquivos exceto .git (remover node_modules também)
   console.log('🧹 Limpando arquivos antigos...');
+  const preserve = new Set(['.git', distDir, 'node_modules']);
   const files = readdirSync('.');
   files.forEach(file => {
-    if (file !== '.git') {
+    if (!preserve.has(file)) {
       try {
         rmSync(file, { recursive: true, force: true });
       } catch (e) {
