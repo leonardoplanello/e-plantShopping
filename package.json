@@ -3,15 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "deploy": "npm run build && git add dist && git commit -m \"Deploy to GitHub Pages\" && git push origin main",
-        "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite build; vite preview --host"
-      },
-
-
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "npm run build && git add dist && git commit -m \"Deploy to GitHub Pages\" && git push origin main",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite build && vite preview --host"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
     "react": "^18.2.0",
